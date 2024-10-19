@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" type="image/svg+xml" href="/profile-pic.png" /> -->
+    <link rel="shortcut icon" href="profile-pic.png" type="image/x-icon">
+    <title>News application - know about everything easily</title>
+    <link rel="stylesheet" href="news.css">
+</head>
+
+<body>
+
+
+    <!-- nav bar -->
+    <nav>
+        <div class="main-nav container flex">
+            <div id="google_translate_element"></div>
+            <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            <script>
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement(
+                        { pageLanguage: 'en' },
+                        'google_translate_element'
+                    );
+                }
+            </script>
+            <a href="#" onclick="reload()">NewsWings</a>
+            <div class="nav-links">
+                <ul class="flex">
+
+                    <li class="hover-link nav-items" id="cricket" onclick="navitem('Cricket')">Cricket</li>
+                    <li class="hover-link nav-items" id="finance" onclick="navitem('finance')">Finance</li>
+                    <li class="hover-link nav-items" id="politics" onclick="navitem('politics')">Politics</li>
+                    <!-- <li class="hover-link nav-items" id="icc" onclick="navitem('icc world cup')">ICC WC</li> -->
+
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="new-input" placeholder="Search e.g. Science">
+                <button class="search-button" id="search-button">Search</button>
+            </div>
+        </div>
+
+
+    </nav>
+
+
+    <main>
+
+
+        <div class="cards-container container flex" id="cards-container">
+
+        </div>
+    </main>
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">this is tittle</h3>
+                <h6 id="news-source">End gadget 20-03-2002</h6>
+                <p id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, eum. Lorem ipsum
+                    dolor sit amet consectetur adipisicing elit. Vero, possimus?</p>
+            </div>
+        </div>
+    </template>
+
+    <script src="news.js"></script>
+</body>
+
+</html>
